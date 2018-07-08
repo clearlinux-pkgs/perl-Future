@@ -1,0 +1,23 @@
+libio-async-perl (0.39-1) unstable; urgency=low
+
+  The Loop API has changed once again. The loops which have been
+  packaged for Debian, namely:
+  - IO::Async::Loop::Epoll (libio-async-loop-epoll-perl)
+  - IO::Async::Loop::Glib (libio-async-loop-glib-perl)
+  have already been brought up-to-date.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Fri, 24 Dec 2010 16:04:45 -0500
+
+libio-async-perl (0.24-1) unstable; urgency=low
+
+  This version introduces a new Loop API, which means loops written
+  against older versions of libio-async-perl (IO::Async) will no
+  longer work.
+
+  The loops which have been packaged for Debian, namely:
+  - IO::Async::Loop::Epoll (libio-async-loop-epoll-perl)
+  - IO::Async::Loop::Glib (libio-async-loop-glib-perl) 
+  have already been brought up-to-date.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Tue, 13 Oct 2009 10:39:17 -0400
+
