@@ -4,14 +4,14 @@
 #
 Name     : perl-Future
 Version  : 0.39
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.39.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.39.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libi/libio-async-perl/libio-async-perl_0.72-1.debian.tar.xz
 Summary  : 'represent an operation awaiting completion'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
-Requires: perl-Future-license
+Requires: perl-Future-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Test::Fatal)
 BuildRequires : perl(Test::Refcount)
@@ -71,13 +71,13 @@ fi
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-Future
-cp LICENSE %{buildroot}/usr/share/doc/perl-Future/LICENSE
-cp deblicense/copyright %{buildroot}/usr/share/doc/perl-Future/deblicense_copyright
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Future
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Future/LICENSE
+cp deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-Future/deblicense_copyright
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -86,12 +86,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Future.pm
-/usr/lib/perl5/site_perl/5.26.1/Future/Mutex.pm
-/usr/lib/perl5/site_perl/5.26.1/Future/Phrasebook.pod
-/usr/lib/perl5/site_perl/5.26.1/Future/Utils.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Future.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Future/Deferred.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Future.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Future/Mutex.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Future/Phrasebook.pod
+/usr/lib/perl5/vendor_perl/5.26.1/Future/Utils.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Future.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Future/Deferred.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -103,6 +103,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test::Future::Deferred.3
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/perl-Future/LICENSE
-/usr/share/doc/perl-Future/deblicense_copyright
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Future/LICENSE
+/usr/share/package-licenses/perl-Future/deblicense_copyright
