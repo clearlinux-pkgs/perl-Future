@@ -4,7 +4,7 @@
 #
 Name     : perl-Future
 Version  : 0.39
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.39.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.39.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libi/libio-async-perl/libio-async-perl_0.72-1.debian.tar.xz
