@@ -86,12 +86,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1/Future.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Future/Mutex.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Future/Phrasebook.pod
-/usr/lib/perl5/vendor_perl/5.28.1/Future/Utils.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Test/Future.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Test/Future/Deferred.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Future.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Future/Mutex.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Future/Phrasebook.pod
+/usr/lib/perl5/vendor_perl/5.28.2/Future/Utils.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Test/Future.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Test/Future/Deferred.pm
 
 %files dev
 %defattr(-,root,root,-)
