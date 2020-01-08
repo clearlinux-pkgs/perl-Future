@@ -4,10 +4,10 @@
 #
 Name     : perl-Future
 Version  : 0.43
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.43.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.43.tar.gz
-Summary  : Perl module to deal with operation awaiting completion
+Summary  : 'represent an operation awaiting completion'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Future-perl = %{version}-%{release}
@@ -35,7 +35,6 @@ say "The operation is complete";
 Summary: dev components for the perl-Future package.
 Group: Development
 Provides: perl-Future-devel = %{version}-%{release}
-Requires: perl-Future = %{version}-%{release}
 Requires: perl-Future = %{version}-%{release}
 
 %description dev
@@ -96,11 +95,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Future.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Future/Exception.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Future/Mutex.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Future/Phrasebook.pod
-/usr/lib/perl5/vendor_perl/5.28.2/Future/Queue.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Future/Utils.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Test/Future.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Test/Future/Deferred.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Future.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Future/Exception.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Future/Mutex.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Future/Phrasebook.pod
+/usr/lib/perl5/vendor_perl/5.30.1/Future/Queue.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Future/Utils.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Test/Future.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Test/Future/Deferred.pm
