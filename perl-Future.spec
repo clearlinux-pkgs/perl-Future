@@ -4,7 +4,7 @@
 #
 Name     : perl-Future
 Version  : 0.43
-Release  : 16
+Release  : 17
 URL      : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.43.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.43.tar.gz
 Summary  : 'represent an operation awaiting completion'
@@ -95,11 +95,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Future.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Future/Exception.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Future/Mutex.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Future/Phrasebook.pod
-/usr/lib/perl5/vendor_perl/5.30.1/Future/Queue.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Future/Utils.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Test/Future.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Test/Future/Deferred.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Future.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Future/Exception.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Future/Mutex.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Future/Phrasebook.pod
+/usr/lib/perl5/vendor_perl/5.30.2/Future/Queue.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Future/Utils.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Test/Future.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Test/Future/Deferred.pm
