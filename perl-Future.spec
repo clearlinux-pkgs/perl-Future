@@ -4,7 +4,7 @@
 #
 Name     : perl-Future
 Version  : 0.47
-Release  : 24
+Release  : 25
 URL      : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.47.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.47.tar.gz
 Summary  : 'represent an operation awaiting completion'
