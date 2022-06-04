@@ -4,12 +4,13 @@
 #
 Name     : perl-Future
 Version  : 0.48
-Release  : 28
+Release  : 29
 URL      : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.48.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.48.tar.gz
 Summary  : 'represent an operation awaiting completion'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Future-license = %{version}-%{release}
 Requires: perl-Future-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Test::Fatal)
@@ -41,6 +42,14 @@ Requires: perl-Future = %{version}-%{release}
 dev components for the perl-Future package.
 
 
+%package license
+Summary: license components for the perl-Future package.
+Group: Default
+
+%description license
+license components for the perl-Future package.
+
+
 %package perl
 Summary: perl components for the perl-Future package.
 Group: Default
@@ -69,6 +78,8 @@ fi
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Future
+cp %{_builddir}/Future-0.48/LICENSE %{buildroot}/usr/share/package-licenses/perl-Future/0f1bd461e6c8275b65b9150dd225781413cf39b6
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -93,13 +104,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test::Future.3
 /usr/share/man/man3/Test::Future::Deferred.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Future/0f1bd461e6c8275b65b9150dd225781413cf39b6
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Future.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Future/Exception.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Future/Mutex.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Future/Phrasebook.pod
-/usr/lib/perl5/vendor_perl/5.34.0/Future/Queue.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Future/Utils.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Future.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Future/Deferred.pm
+/usr/lib/perl5/*
