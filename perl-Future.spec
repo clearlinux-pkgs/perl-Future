@@ -5,7 +5,7 @@
 #
 Name     : perl-Future
 Version  : 0.50
-Release  : 31
+Release  : 32
 URL      : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.50.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Future-0.50.tar.gz
 Summary  : 'represent an operation awaiting completion'
